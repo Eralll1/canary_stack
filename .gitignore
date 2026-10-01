@@ -1,0 +1,13 @@
+# build output
+*.o
+*.out
+a.out
+main
+Stack
+res
+stack_canary
+
+# editor / OS junk
+.vscode/
+*.swp
+.DS_Store
