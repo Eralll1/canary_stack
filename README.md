@@ -1,7 +1,10 @@
 # Canary Stack
 Simple stack implementation with canary protection
 
+## Try creaking me XD
+
 ## Compilation
+
 
 You can compile it with 
 > gcc stack_canary.c mylib.c -o main
@@ -22,8 +25,6 @@ ST_NULL_mem_ptr     = 1<<5 ~ start of stack is NULL <br>
 ST_calloc_fail      = 1<<6 ~ calloc fialed <br>
 ST_invalid_stack    = 1<<7 ~ not stack* was passed <br> 
 ST_empty_pop        = 1<<8 ~ tried popping an empty stack <br>
-
-I LOVE SUCKING COCKS
 
 stack_create take a pointer to an uninitialized struct Stack
 stack capacity is locked to a power of 2 

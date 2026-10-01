@@ -164,7 +164,7 @@ void stack_resize(struct Stack* stack, int* status, size_t new_size){
     // do this to avoid uninitialized memory
     // though it should not matter
     // TODO: INCLUDE CANARY +
-    stack_t* new_ptr = calloc(new_size_rounded + CANARY_AMOUNT, sizeof(stack_t));
+    stack_t* new_ptr = calloc(new_size_rounded + 1, sizeof(stack_t));
     if (new_ptr == NULL) { 
         *status |= ST_calloc_fail;
         return;
@@ -227,20 +227,4 @@ stack_t stack_pop(struct Stack* stack, int* status) {
     CHECK_STACK(stack, status, DEFAULT_VAL);
 
     return res;
-}
-
-
-int main(){
-    struct Stack stack = {};
-    int status_val = ST_OK;
-    int* status = &status_val;
-    stack_create(&stack, status, 2);
-
-    stack_resize(&stack, status, 12);
-    stack_pop(&stack, status);
-    dump_stack(stderr, &stack, status);
-    //TODO: free + 
-    
-    stack_free(&stack, status);
-
 }
