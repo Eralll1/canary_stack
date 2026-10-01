@@ -42,5 +42,5 @@ checking whether 2 canaries are 'alive'
 
 // TODO 
 // binary with separators
-// lowe rand upper case letters (error string)
+// lower and upper case letters (error string)
 // strerr 
