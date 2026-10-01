@@ -23,6 +23,8 @@ ST_calloc_fail      = 1<<6 ~ calloc fialed <br>
 ST_invalid_stack    = 1<<7 ~ not stack* was passed <br> 
 ST_empty_pop        = 1<<8 ~ tried popping an empty stack <br>
 
+I LOVE SUCKING COCKS
+
 stack_create take a pointer to an uninitialized struct Stack
 stack capacity is locked to a power of 2 
 
